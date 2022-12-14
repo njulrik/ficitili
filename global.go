@@ -41,7 +41,7 @@ var defaultConfiguration config = config{
 	FormulaDepth:           2,        // maximum depth of generated formulas
 	MaxFilterTries:         3,        // maximum number of call to SMC per model
 	FilterSetSize:          16,       // number of formula to generate for one round of SMC filtering
-	SMCPath:                "smc.py",
+	SMCPath:                "smc/smc.py",
 	SMCTmpFileName:         "tmp",
 	SMClogfile:             "smclog",
 	SMCMaxStates:           2000,

@@ -7,8 +7,6 @@ old_inputs/*
 coloredids.patch
 problems.md
 log.log
-smc.py
-smclog
 tmp.xml
 INPUTS.tar.gz
 logs/*
@@ -17,3 +15,5 @@ smclog*
 *.tgz
 qualif/*
 config2022.json
+
+__pycache__

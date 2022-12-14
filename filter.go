@@ -58,7 +58,9 @@ func runSMC(model, formulas string, numToFind int, logger *log.Logger, routineNu
 	tokeep := make([]int, 0)
 	smcMaxStates := fmt.Sprint("--max-states=", globalConfiguration.SMCMaxStates)
 	smcStopAfter := fmt.Sprint("--mcc15-stop-after=", numToFind)
-	smcCommand := exec.Command("python", globalConfiguration.SMCPath, "--use10", smcMaxStates, smcStopAfter, model, formulas)
+	smcCommand := exec.Command(
+		"python", globalConfiguration.SMCPath,
+		"--use10", smcMaxStates, smcStopAfter, model, formulas)
 	logFile := fmt.Sprint(globalConfiguration.SMClogfile, routineNum)
 	logSMCCommand := exec.Command("tee", "-a", logFile)
 	filterCommand1 := exec.Command("grep", "-v", "^smc:")
